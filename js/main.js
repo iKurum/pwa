@@ -28,4 +28,4 @@ nBack.addEventListener(
   false
 );
 
-obj_load('./page/home.html');
+obj_load('./page/map.html');

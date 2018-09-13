@@ -1,6 +1,6 @@
 'use strict';
 
-const v = '1.0.0v2',
+const v = '1.0.0v3',
   cacheList = [
     '/',
     '/index.html',
@@ -44,8 +44,15 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches
-      .match(e.request)
-      .then(res => (res != null ? res : fetch(e.request.url)))
+    caches.match(e.request).then(
+      res =>
+        res ||
+        fetch(e.request.url).then(res =>
+          caches.open(v).then(cache => {
+            cache.put(e.request, res.clone());
+            return res;
+          })
+        )
+    )
   );
 });
