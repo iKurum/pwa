@@ -1,0 +1,59 @@
+html,
+body,
+progress,
+header {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: url(../img/cursor_16.ico), auto;
+}
+
+progress {
+  width: 100%;
+  height: 0.125rem;
+  position: absolute;
+  top: 0;
+}
+
+header {
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 1px #ccc;
+  margin: 0 0 0.125rem 0;
+  padding: 0.125rem;
+}
+
+nav {
+  width: 6.25rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: -100px;
+  background-color: #e1e1e1;
+  z-index: 999;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

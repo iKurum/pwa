@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>oneWork</title>
+  <link rel="stylesheet" href="./css/comm.css">
+  <link rel="stylesheet" href="./css/mian.css">
+</head>
+
+<body>
+  <progress value max="100"></progress>
+  <script src="./js/loadProgress.js"></script>
+
+  <header>
+    <div>
+      <img src="./img/nav.png" alt="nav">
+      <span>oneWork</span>
+    </div>
+  </header>
+
+  <nav>
+    <div class="user"></div>
+    <i class="gback"><img src="./img/gBack.png" alt="back"></i>
+  </nav>
+
+  <main>
+    <article></article>
+    <div class="userBtn"></div>
+  </main>
+
+  <script src="./js/comm.js" defer></script>
+  <script src="./js/main.js" defer></script>
+
+  <script defer>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+          // 注册成功
+          console.log('ServiceWorker registration successful with scope: ', reg.scope);
+        })
+        .catch(err => {
+          // 注册失败:(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+  </script>
+</body>
+
+</html>

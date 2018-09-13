@@ -1,0 +1,42 @@
+header > div {
+  display: flex;
+  width: 6.4375rem;
+  align-items: center;
+  cursor: url(../img/cursor_hand_24.ico), pointer;
+}
+
+div.user {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-image: url(../img/userBg.png);
+}
+
+i.gback {
+  position: fixed;
+  bottom: 0;
+  cursor: url(../img/cursor_hand_24.ico), pointer;
+}
+
+div.userBtn {
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.0625rem solid #000;
+  border-radius: 50%;
+  background: url(../img/userBtn.png) no-repeat center;
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
