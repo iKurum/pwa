@@ -1,8 +1,9 @@
 'use strict';
 
-const v = '1.0.0v3',
+const v = '1.0.0v4',
   cacheList = [
     '/',
+    '/favicon.ico',
     '/index.html',
     '/css/comm.css',
     '/css/mian.css',
