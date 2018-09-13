@@ -1,6 +1,6 @@
 'use strict';
 
-const v = '1.0.0v1',
+const v = '1.0.0v2',
   cacheList = [
     '/',
     '/index.html',
@@ -15,8 +15,7 @@ const v = '1.0.0v1',
     '/js/comm.js',
     '/js/loadProgress.js',
     '/js/main.js',
-    '/page/home.html',
-    '/page/map.html'
+    '/page/home.html'
   ];
 
 self.addEventListener('install', e => {
